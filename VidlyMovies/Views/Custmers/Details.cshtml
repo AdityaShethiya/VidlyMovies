@@ -1,0 +1,42 @@
+﻿@model VidlyMovies.Models.Custmer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Custmer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CustmerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustmerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MembershipTypeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MembershipTypeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CustmerId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

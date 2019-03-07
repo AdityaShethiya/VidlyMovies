@@ -1,0 +1,51 @@
+﻿@model IEnumerable<VidlyMovies.Models.Custmer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CustmerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MembershipTypeId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model =>model.SignupFree)
+            </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustmerName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MembershipTypeId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfBirth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem=> item.SignupFree)
+            </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CustmerId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CustmerId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CustmerId })
+        </td>
+    </tr>
+}
+
+</table>
